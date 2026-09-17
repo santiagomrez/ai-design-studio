@@ -109,7 +109,7 @@ export type DesignElement =
 export interface DesignBackground {
   type: "color" | "image";
   color: string;
-  src?: string;
+  src?: string | undefined;
 }
 
 export interface Design {
@@ -120,11 +120,11 @@ export interface Design {
   height: number;
   background: DesignBackground;
   elements: DesignElement[];
-  referenceId?: string;
-  brandId?: string;
-  designDNA?: DesignDNA;
+  referenceId?: string | undefined;
+  brandId?: string | undefined;
+  designDNA?: DesignDNA | undefined;
   /** Which generated direction this design came from. */
-  direction?: LayoutDirection;
+  direction?: LayoutDirection | undefined;
   createdAt: string;
   updatedAt: string;
 }
@@ -138,7 +138,7 @@ export interface ReferenceImage {
   style: string;
   tags: string[];
   /** Populated once the reference has been analyzed. */
-  dna?: DesignDNA;
+  dna?: DesignDNA | undefined;
 }
 
 export interface DesignDNA {
@@ -205,7 +205,7 @@ export interface DesignBrief {
   objective: Objective;
   format: FormatId;
   brandId: string;
-  referenceId?: string;
+  referenceId?: string | undefined;
 }
 
 /* ----------------------------------------------------------------------- QA */
@@ -260,8 +260,8 @@ export interface Project {
   name: string;
   status: ProjectStatus;
   design: Design;
-  brief?: DesignBrief;
-  qa?: DesignQA;
+  brief?: DesignBrief | undefined;
+  qa?: DesignQA | undefined;
   createdAt: string;
   updatedAt: string;
 }

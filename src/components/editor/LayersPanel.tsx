@@ -5,7 +5,7 @@ import {
   EyeOff,
   Image as ImageIcon,
   Lock,
-  MousePointerSquare,
+  MousePointer,
   Square,
   Type,
   Unlock,
@@ -17,7 +17,7 @@ const ICONS = {
   text: Type,
   image: ImageIcon,
   shape: Square,
-  button: MousePointerSquare,
+  button: MousePointer,
   logo: Type,
 } as const;
 

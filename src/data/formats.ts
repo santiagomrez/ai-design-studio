@@ -44,7 +44,7 @@ export const CANVAS_FORMATS: CanvasFormat[] = [
 ];
 
 export function getFormat(id: FormatId): CanvasFormat {
-  return CANVAS_FORMATS.find((f) => f.id === id) ?? CANVAS_FORMATS[0];
+  return CANVAS_FORMATS.find((f) => f.id === id) ?? CANVAS_FORMATS[0]!;
 }
 
 /** Rough guide used to warn when copy is too long for the chosen canvas. */

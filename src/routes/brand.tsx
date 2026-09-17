@@ -34,8 +34,8 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 function BrandPage() {
-  const [activeId, setActiveId] = useState(BRANDS[0].id);
-  const brand = BRANDS.find((b) => b.id === activeId) ?? BRANDS[0];
+  const [activeId, setActiveId] = useState(BRANDS[0]!.id);
+  const brand = BRANDS.find((b) => b.id === activeId) ?? BRANDS[0]!;
 
   return (
     <AppShell>

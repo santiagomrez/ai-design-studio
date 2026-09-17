@@ -86,7 +86,7 @@ export function useDesignEditor(project: Project) {
       const target = index + direction;
       if (index < 0 || target < 0 || target >= ordered.length) return current;
       const swapped = [...ordered];
-      [swapped[index], swapped[target]] = [swapped[target], swapped[index]];
+      [swapped[index], swapped[target]] = [swapped[target]!, swapped[index]!];
       history.current = [...history.current.slice(-19), current];
       return {
         ...current,

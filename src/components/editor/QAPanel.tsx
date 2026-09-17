@@ -13,7 +13,7 @@ export function QAPanel({
   onAutoFix,
   onUndo,
 }: {
-  qa?: DesignQA;
+  qa?: DesignQA | undefined;
   running: boolean;
   fixing: boolean;
   canUndo: boolean;

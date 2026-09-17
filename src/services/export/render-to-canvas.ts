@@ -36,7 +36,7 @@ function wrapLines(
       lines.push("");
       continue;
     }
-    let current = words[0];
+    let current = words[0]!;
     for (const word of words.slice(1)) {
       const candidate = `${current} ${word}`;
       if (ctx.measureText(candidate).width <= maxWidth) current = candidate;

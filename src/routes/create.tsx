@@ -207,7 +207,7 @@ function CreateFlow() {
           <div>
             <div className="label-caps">Create design</div>
             <h1 className="mt-1 text-2xl font-semibold tracking-tight">
-              Step {String(step).padStart(2, "0")} — {STEPS[step - 1].label}
+              Step {String(step).padStart(2, "0")} — {STEPS[step - 1]!.label}
             </h1>
           </div>
           <ProgressSteps steps={STEPS} current={step} onStepClick={setStep} />

@@ -18,7 +18,7 @@ export interface DesignVariation {
 }
 
 export interface AnalyzeReferenceInput {
-  referenceId?: string;
+  referenceId?: string | undefined;
   /** Data URL or asset URL of an uploaded reference. */
   src: string;
 }

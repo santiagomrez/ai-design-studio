@@ -7,7 +7,7 @@ import type { AIMode, AIProvider } from "./types";
  * through a server-side orchestrator (not implemented in this prototype).
  */
 export const AI_MODE: AIMode =
-  (import.meta.env.VITE_AI_MODE as AIMode | undefined) ?? "demo";
+  (import.meta.env['VITE_AI_MODE'] as AIMode | undefined) ?? "demo";
 
 const mockProvider = new MockAIProvider();
 
