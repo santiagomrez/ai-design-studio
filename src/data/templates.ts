@@ -1,0 +1,68 @@
+import type { DesignTemplate } from "@/types/design";
+
+export const TEMPLATES: DesignTemplate[] = [
+  {
+    id: "tpl-editorial-hero",
+    name: "Editorial Hero",
+    kind: "Hero",
+    description: "Large headline, light subtitle, low hero visual, pill CTA.",
+    layers: ["Headline", "Subtitle", "Hero Image", "CTA", "Logo"],
+    direction: "A",
+  },
+  {
+    id: "tpl-educational",
+    name: "Teaching Card",
+    kind: "Educational",
+    description: "Numbered idea with supporting explanation and CTA.",
+    layers: ["Eyebrow", "Headline", "Body", "CTA", "Logo"],
+    direction: "B",
+  },
+  {
+    id: "tpl-quote",
+    name: "Statement Quote",
+    kind: "Quote",
+    description: "Full-canvas typographic statement with attribution.",
+    layers: ["Quote", "Attribution", "Logo"],
+    direction: "C",
+  },
+  {
+    id: "tpl-list",
+    name: "List Breakdown",
+    kind: "List",
+    description: "Counted list with strong left rail and hero accent.",
+    layers: ["Headline", "List", "CTA", "Logo"],
+    direction: "B",
+  },
+  {
+    id: "tpl-story",
+    name: "Story Opener",
+    kind: "Storytelling",
+    description: "Cinematic hero with headline anchored bottom left.",
+    layers: ["Hero Image", "Headline", "Subtitle", "Logo"],
+    direction: "C",
+  },
+  {
+    id: "tpl-data",
+    name: "Data Point",
+    kind: "Data",
+    description: "One oversized metric with framing copy.",
+    layers: ["Metric", "Headline", "Body", "Logo"],
+    direction: "B",
+  },
+  {
+    id: "tpl-announcement",
+    name: "Announcement",
+    kind: "Announcement",
+    description: "Date, title and CTA on a clean editorial grid.",
+    layers: ["Eyebrow", "Headline", "Details", "CTA", "Logo"],
+    direction: "A",
+  },
+  {
+    id: "tpl-promo",
+    name: "Offer Card",
+    kind: "Promotional",
+    description: "Product hero with high contrast offer band.",
+    layers: ["Hero Image", "Headline", "Offer", "CTA", "Logo"],
+    direction: "A",
+  },
+];
