@@ -38,7 +38,9 @@ export function ReferenceCard({
       <div className="space-y-2 p-4">
         <div>
           <div className="text-[13px] font-medium">{reference.name}</div>
-          <div className="text-[11px] text-muted-foreground">{reference.style}</div>
+          {reference.style !== reference.name ? (
+            <div className="text-[11px] text-muted-foreground">{reference.style}</div>
+          ) : null}
         </div>
         <div className="flex flex-wrap gap-1">
           {reference.tags.slice(0, 3).map((tag) => (
