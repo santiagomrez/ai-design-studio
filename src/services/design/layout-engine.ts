@@ -163,7 +163,7 @@ function buildDirectionA(ctx: BuildContext): DesignElement[] {
   const headlineSize = fitFontSize(brief.headline || "HEADLINE", boxWidth, H * 0.26, {
     max: Math.round(W * 0.17),
     min: Math.round(W * 0.055),
-    lineHeight: 0.95,
+    lineHeight: 1.08,
     letterSpacing: -0.02,
   });
   const headlineHeight = estimateTextHeight(
@@ -184,7 +184,7 @@ function buildDirectionA(ctx: BuildContext): DesignElement[] {
       height: headlineHeight,
       fontSize: headlineSize,
       fontWeight: ctx.headlineWeight,
-      lineHeight: 0.95,
+      lineHeight: 1.08,
       letterSpacing: -headlineSize * 0.02,
       color: ink,
       textTransform: "uppercase",
@@ -243,9 +243,9 @@ function buildDirectionB(ctx: BuildContext): DesignElement[] {
   const headlineSize = fitFontSize(brief.headline || "HEADLINE", boxWidth, H * 0.3, {
     max: Math.round(W * 0.14),
     min: Math.round(W * 0.05),
-    lineHeight: 1,
+    lineHeight: 1.08,
   });
-  const headlineHeight = estimateTextHeight(brief.headline, boxWidth, headlineSize, 1);
+  const headlineHeight = estimateTextHeight(brief.headline, boxWidth, headlineSize, 1.08);
   const eyebrowSize = Math.round(W * 0.024);
   const subSize = Math.round(W * 0.038);
   const subY = H * 0.13 + headlineHeight + H * 0.025;
@@ -275,7 +275,7 @@ function buildDirectionB(ctx: BuildContext): DesignElement[] {
       height: headlineHeight,
       fontSize: headlineSize,
       fontWeight: ctx.headlineWeight,
-      lineHeight: 1,
+      lineHeight: 1.08,
       letterSpacing: -headlineSize * 0.015,
       color: ink,
       align: "center",
@@ -344,9 +344,9 @@ function buildDirectionC(ctx: BuildContext): DesignElement[] {
   const headlineSize = fitFontSize(brief.headline || "HEADLINE", boxWidth, H * 0.2, {
     max: Math.round(W * 0.13),
     min: Math.round(W * 0.05),
-    lineHeight: 0.98,
+    lineHeight: 1.08,
   });
-  const headlineHeight = estimateTextHeight(brief.headline, boxWidth, headlineSize, 0.98);
+  const headlineHeight = estimateTextHeight(brief.headline, boxWidth, headlineSize, 1.08);
   const subSize = Math.round(W * 0.034);
   const headlineY = H * 0.63;
 
@@ -379,7 +379,7 @@ function buildDirectionC(ctx: BuildContext): DesignElement[] {
       height: headlineHeight,
       fontSize: headlineSize,
       fontWeight: ctx.headlineWeight,
-      lineHeight: 0.98,
+      lineHeight: 1.08,
       letterSpacing: -headlineSize * 0.015,
       color: ink,
       textTransform: "uppercase",
