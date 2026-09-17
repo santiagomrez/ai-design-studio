@@ -467,7 +467,7 @@ export function buildDesign(
     accent,
     muted: "#6E6B64",
     headlineWeight: brand.fonts[0]?.weight ?? 800,
-    hero: heroSrc ?? DEMO_HERO_IMAGES[0],
+    hero: heroSrc ?? DEMO_HERO_IMAGES[0]!,
     brief,
   };
 
