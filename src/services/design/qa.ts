@@ -52,7 +52,7 @@ export function evaluateDesign(design: Design): DesignQA {
   // Legibility: CTA label size relative to canvas.
   const ctaRatio = cta ? cta.fontSize / design.width : 0.027;
   const legibility = clamp(78 + (ctaRatio - 0.02) * 900);
-  if (cta && ctaRatio < 0.026) {
+  if (cta && ctaRatio < 0.03) {
     warnings.push({
       id: "cta-small",
       message: "CTA may be too small.",
@@ -70,7 +70,7 @@ export function evaluateDesign(design: Design): DesignQA {
     ? estimateLineCount(headline.content, headline.width, headline.fontSize)
     : 2;
   const spacing = clamp(72 + marginScore - Math.max(0, headlineLines - 3) * 6);
-  if (headline && headline.width > design.width * 0.86) {
+  if (headline && headline.width > design.width * 0.8) {
     warnings.push({
       id: "headline-width",
       message: "Headline is approaching maximum width.",
