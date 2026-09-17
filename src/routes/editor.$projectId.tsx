@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getBrand } from "@/data/brands";
-import { CANVAS_FORMATS, getFormat } from "@/data/formats";
+import { CANVAS_FORMATS } from "@/data/formats";
 import { getReference } from "@/data/references";
 import { useDesignEditor } from "@/hooks/useDesignEditor";
 import { useAssets, useProject } from "@/hooks/useAppStore";
