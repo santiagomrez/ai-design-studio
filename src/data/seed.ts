@@ -78,5 +78,3 @@ export function createSeedProjects(): Project[] {
     };
   });
 }
-
-export const SEED_ACTIVITY: { kind: Parameters<typeof String>[0]; target: string }[] = [];
