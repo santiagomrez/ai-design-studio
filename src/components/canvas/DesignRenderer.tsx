@@ -13,10 +13,10 @@ interface DesignRendererProps {
   design: Design;
   /** 1 = actual pixels. */
   scale: number;
-  selectedId?: string | null;
-  onSelectElement?: (id: string | null) => void;
-  interactive?: boolean;
-  className?: string;
+  selectedId?: string | null | undefined;
+  onSelectElement?: ((id: string | null) => void) | undefined;
+  interactive?: boolean | undefined;
+  className?: string | undefined;
 }
 
 function ElementBody({ element }: { element: DesignElement }) {
@@ -210,7 +210,7 @@ export function DesignThumbnail({
 }: {
   design: Design;
   boxWidth: number;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <DesignRenderer design={design} scale={boxWidth / design.width} className={className} />

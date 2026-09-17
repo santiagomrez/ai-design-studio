@@ -58,5 +58,5 @@ export const BRANDS: BrandDNA[] = [
 ];
 
 export function getBrand(id: string): BrandDNA {
-  return BRANDS.find((b) => b.id === id) ?? BRANDS[0];
+  return BRANDS.find((b) => b.id === id) ?? BRANDS[0]!;
 }

@@ -1,5 +1,18 @@
 import { createSeedProjects } from "@/data/seed";
-import { hydrateStore, logActivity, saveProject } from "@/lib/store";
+import { addAsset, hydrateStore, logActivity, newId, saveProject } from "@/lib/store";
+import type { AssetItem } from "@/types/design";
+import heroPerson from "@/assets/hero-person.jpg";
+import heroDevices from "@/assets/hero-devices.jpg";
+import bgNeutral from "@/assets/bg-neutral.jpg";
+
+function demoAssets(): AssetItem[] {
+  const now = new Date().toISOString();
+  return [
+    { id: newId("asset"), name: "Presenter portrait", src: heroPerson, category: "People", createdAt: now },
+    { id: newId("asset"), name: "Product devices", src: heroDevices, category: "Products", createdAt: now },
+    { id: newId("asset"), name: "Neutral backdrop", src: bgNeutral, category: "Backgrounds", createdAt: now },
+  ];
+}
 
 const FLAG = "design-ai:seeded:v1";
 
@@ -14,6 +27,8 @@ export function seedDemoDataIfNeeded() {
     .slice()
     .reverse()
     .forEach(saveProject);
+
+  demoAssets().forEach(addAsset);
 
   logActivity("QA completed", "30X Podcast — Episode 08");
   logActivity("Design approved", "5 cosas gratis en línea");

@@ -259,8 +259,8 @@ export function PropertiesPanel({
                 min={50}
                 max={150}
                 step={1}
-                onValueChange={([scale]) =>
-                  onUpdate({ scale: scale / 100 } as Partial<ImageElement>)
+                onValueChange={(values) =>
+                  onUpdate({ scale: (values[0] ?? 100) / 100 } as Partial<ImageElement>)
                 }
               />
               <span className="w-10 text-right text-[12px] tabular-nums text-muted-foreground">
@@ -317,7 +317,7 @@ export function PropertiesPanel({
               min={10}
               max={100}
               step={1}
-              onValueChange={([opacity]) => onUpdate({ opacity: opacity / 100 })}
+              onValueChange={(values) => onUpdate({ opacity: (values[0] ?? 100) / 100 })}
             />
             <span className="w-10 text-right text-[12px] tabular-nums text-muted-foreground">
               {Math.round(element.opacity * 100)}%
